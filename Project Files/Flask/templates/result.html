@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <style>
+        body {
+            background-image: url("https://c4.wallpaperflare.com/wallpaper/637/160/921/car-landscape-vehicle-road-wallpaper-preview.jpg");
+            background-size: cover;
+            font-family: Arial, sans-serif;
+            color: white;
+        }
+
+        .result-box {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            margin: 100px auto;
+            width: 500px;
+            border-radius: 15px;
+            text-align: center;
+        }
+
+        h1 {
+            color: #00FF00;
+        }
+
+        a {
+            color: #00FFAA;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="result-box">
+        <h1>Estimated Traffic Volume</h1>
+        <p style="font-size: 24px;">{{ prediction_text }}</p>
+        <a href="{{ url_for('home') }}">Go Back</a>
+    </div>
+</body>
+</html>
